@@ -1,0 +1,29 @@
+set(
+    LIB_682_NANOPORE_COMPRESSION_SOURCE_FILES
+    attributes.hpp
+    rice_map_sse.hpp
+    simd_acceleration.hpp
+    unconditional286/unconditional286_api.hpp
+    unconditional286/unconditional286_compressor_sse.hpp
+    unconditional286/unconditional286_medium_large_data_output_stream.hpp
+    unconditional286/unconditional286_read_stream_types.hpp
+    unconditional286/unconditional286_read_streams.hpp
+    unconditional286/unconditional286_small_data_input_stream.hpp
+    unconditional286/unconditional286_small_data_output_stream.hpp
+    unconditional286/unconditional286_utils.hpp
+    unconditional286/unconditional286_vb_serial.hpp
+    unconditional286/unconditional286_vb_sse.hpp
+    buffered_skip_bit_output_stream/buffered_skip_bit_output_stream.hpp
+)
+
+add_library(
+    lib-682-nanopore-compression
+    STATIC
+    ${LIB_682_NANOPORE_COMPRESSION_SOURCE_FILES}
+)
+
+set_target_properties(
+    lib-682-nanopore-compression
+    PROPERTIES
+    LINKER_LANGUAGE
+    CXX)

@@ -1,0 +1,2 @@
+include_directories(definitions)
+add_subdirectory(definitions)
